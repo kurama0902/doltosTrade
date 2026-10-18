@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.vite/
+*.local
+
+# Local environment files; keep the documented public settings template.
+.env
+.env.*
+!.env.example
+
+# Generated test and compiler output.
+test-results/
+playwright-report/
+coverage/
+*.tsbuildinfo
+
+# Local logs, editor settings, and OS metadata.
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

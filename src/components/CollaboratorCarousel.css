@@ -1,0 +1,263 @@
+.collaborator-carousel {
+  padding: 34px 0 30px;
+  border-top: 1px solid #ffffff10;
+}
+.collaborator-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.collaborator-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+  color: #9099b8;
+}
+.collaborator-heading .status-dot {
+  width: 4px;
+  height: 4px;
+  background: #999cff;
+}
+.collaborator-heading h2 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-top: 13px;
+}
+.collaborator-heading p {
+  color: #71809d;
+  font-size: 11px;
+  margin-top: 10px;
+}
+.collaborator-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  overscroll-behavior-x: contain;
+  overflow-anchor: none;
+  padding-block: 7px 12px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 2%,
+    #000 96%,
+    transparent 100%
+  );
+}
+.collaborator-track {
+  display: flex;
+  width: max-content;
+}
+.collaborator-group {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px 0 0;
+  margin: 0;
+  list-style: none;
+}
+.collaborator-group > li {
+  flex: 0 0 292px;
+  width: 292px;
+}
+.collaborator-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 249px;
+  padding: 23px 23px 19px;
+  border: 1px solid #ffffff13;
+  background:
+    radial-gradient(ellipse at 0 0, #767dff0a, transparent 65%),
+    linear-gradient(125deg, #161a26, #10141e);
+  border-radius: 10px;
+  transition:
+    border-color 0.25s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.collaborator-card:hover,
+.collaborator-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #9398ff70;
+  box-shadow: 0 8px 30px #555eff0e;
+}
+.collaborator-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 13px;
+}
+.collaborator-card-top > svg {
+  color: #4f5d7a;
+  margin-top: 5px;
+  transition:
+    transform 0.25s,
+    color 0.25s;
+}
+.collaborator-card:hover .collaborator-card-top > svg {
+  transform: translate(2px, -2px);
+  color: #acb1fa;
+}
+.collaborator-logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 48px;
+  width: 170px;
+}
+.collaborator-logo img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+.logo-hugging-face img {
+  width: 48px;
+  height: 48px;
+}
+.logo-microsoft img,
+.logo-modal img {
+  width: 151px;
+  height: 29px;
+}
+.logo-shadeform img {
+  width: 168px;
+  height: 32px;
+}
+.collaborator-card h3 {
+  color: #e0e5f5;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  margin-top: 17px;
+}
+.collaborator-category {
+  color: #697c9c;
+  font-size: 6px;
+  letter-spacing: 1px;
+  margin-top: 7px;
+}
+.collaborator-card p {
+  color: #8392af;
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 12px;
+  max-width: 240px;
+}
+.collaborator-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 8px;
+  color: #6a7e9f;
+  padding-top: 15px;
+  margin-top: auto;
+}
+.collaborator-card-bottom > svg {
+  color: #6a729f;
+}
+.collaborator-hint {
+  font-size: 8px;
+  color: #7887a3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 7px;
+}
+.collaborator-hint .status-dot {
+  width: 4px;
+  height: 4px;
+  box-shadow: none;
+}
+.collaborator-hint > span:last-child {
+  margin-left: auto;
+  color: #515f7c;
+}
+.collaborator-viewport::-webkit-scrollbar {
+  display: none;
+}
+.collaborator-viewport[data-dragging="true"],
+.collaborator-viewport[data-dragging="true"] a {
+  cursor: grabbing;
+}
+.collaborator-viewport a {
+  cursor: inherit;
+  -webkit-user-drag: none;
+}
+.collaborator-viewport:focus-visible {
+  outline: 1px solid #9398ff70;
+  outline-offset: 3px;
+}
+.collaborator-viewport:has(a:focus-visible) {
+  mask-image: none;
+}
+@media (max-width: 960px) {
+  .collaborator-heading h2 {
+    font-size: 24px;
+  }
+  .collaborator-group > li {
+    flex-basis: 275px;
+    width: 275px;
+  }
+  .collaborator-card {
+    padding-inline: 21px;
+  }
+}
+@media (max-width: 740px) {
+  .collaborator-carousel {
+    padding-block: 29px;
+    margin-top: 60px;
+  }
+  .collaborator-heading {
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 19px;
+  }
+  .collaborator-heading h2 {
+    font-size: 23px;
+    letter-spacing: -0.7px;
+    max-width: 260px;
+    line-height: 1.4;
+  }
+  .collaborator-heading .eyebrow {
+    font-size: 7px;
+  }
+  .collaborator-heading p {
+    font-size: 10px;
+    max-width: 230px;
+    line-height: 1.7;
+  }
+  .collaborator-group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+  .collaborator-group > li {
+    flex-basis: 262px;
+    width: 262px;
+  }
+  .collaborator-card {
+    height: 244px;
+    padding: 21px 20px 17px;
+  }
+  .collaborator-card h3 {
+    font-size: 15px;
+  }
+  .collaborator-hint {
+    font-size: 7px;
+    gap: 6px;
+  }
+  .collaborator-hint > span:last-child {
+    font-size: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .collaborator-card:hover,
+  .collaborator-card:focus-visible {
+    transform: none;
+  }
+}
